@@ -63,9 +63,19 @@ const Stats = () => {
       role="list"
       className="w-full grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-16"
     >
-      {tokens.map((token) => {
+      {tokens.map((token: StatsProps, index: number) => {
         const { coinType, coinIcon, graph, amount, count, gain } = token;
-        return <StatCard coinIcon={coinIcon} coinType={coinType} graph={graph} amount={amount} count={count} gain={gain} />;
+        return (
+          <StatCard
+            coinIcon={coinIcon}
+            coinType={coinType}
+            graph={graph}
+            amount={amount}
+            count={count}
+            gain={gain}
+            key={index}
+          />
+        );
       })}
     </ul>
   );

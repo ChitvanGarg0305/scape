@@ -5,6 +5,7 @@ import TokenUtility from "./components/TokenUtility";
 import FAQ from "./components/FAQ";
 import Testimonial from "./components/Testimonial";
 import ContentWrapper from "./components/Wrappers/ContentWrapper";
+import BlogPost from "./components/BlogPost";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         <FAQ />
       </ContentWrapper>
       <Testimonial />
+
+      <BlogPost />
     </>
   );
 }
